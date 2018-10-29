@@ -31,6 +31,7 @@ namespace ProyectoVideoclub
             //}
             //conexion.Close();
             //Console.ReadLine();
+
             //Como se trata de un string no hace falta hacer lo de Futbolista f1 = new Futbolista()
             listaFrases.Add("M.C. Hammer learned the hard way that Chuck Norris can touch this.");
             listaFrases.Add("When the Boogeyman goes to sleep every night he checks his closet for Chuck Norris.");
@@ -44,7 +45,7 @@ namespace ProyectoVideoclub
 
             MenuInicial();
         }
-        //Aparece un primer Menu Inicial e el que sólo tengo la opción de Loguearme, Registrarme o Salir
+        //Aparece un primer Menu Inicial en el que sólo tengo la opción de Loguearme, Registrarme o Salir
         public static void MenuInicial()
         {
             const int LOGIN = 1, REGISTRO = 2, SALIR=3;
@@ -134,7 +135,7 @@ namespace ProyectoVideoclub
             nombre = Console.ReadLine();
             Console.WriteLine("Apellido");
             apellido = Console.ReadLine();
-            Console.WriteLine("Email");//TODO:q no se pueda quedar vaío, comprobar metodoemail
+            Console.WriteLine("Email");//TODO:q no se pueda quedar vacío, comprobar metodoemail
             email = Console.ReadLine();
             Console.WriteLine("Fecha de Nacimiento");
             fechaNac = Convert.ToDateTime(Console.ReadLine());
@@ -154,11 +155,13 @@ namespace ProyectoVideoclub
             if (!cliente.InsertarCliente())
             {
                 Console.WriteLine("No se ha podido insertar el registro, vuelve a introducir tus datos");
+                Console.WriteLine();
                 RegistrarCliente();
             }
             else
             {
                 Console.WriteLine("Te has registrado correctamente.");
+                Console.WriteLine();
                 MenuInicial();
             }
             

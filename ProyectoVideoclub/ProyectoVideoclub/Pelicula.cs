@@ -47,9 +47,7 @@ namespace ProyectoVideoclub
 
         }
 
-        // Este proceso devuelve un Listado      
-        // de peliculas que cumplan los 
-        // requisitos de edad del usuario
+        // devuelvo un Listado  de peliculas que cumplan los requisitos de edad del usuario
         // devuelve SqlDataReader con el listado
         public List<Pelicula> PeliculasPorEdad(int IdCliente)
         {
@@ -86,8 +84,7 @@ namespace ProyectoVideoclub
             }
         }
 
-        // Este proceso recibe un idcliente y un id pelicula
-        // comprueba si existe en la tabla de peliculas y si está disponible      
+        // recibo un idcliente y un id pelicula compruebo si existe en la tabla de peliculas y si está disponible      
         // entra id pelicula, idcliente
         // devuelve si la pelicula está disponible o no
         public string CheckPelicula(string idPelicula, int idCliente)

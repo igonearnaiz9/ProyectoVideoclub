@@ -89,6 +89,7 @@ namespace ProyectoVideoclub
         {
             this.fechaNac = fechaNac;
         }
+
         // Recibo una direccion de correo y compruebo si existe en la tabla de clientes      
         // entra Direccion de correo a comprobar 
         // devuelve el ID_CLIENTE si existe, si no devuelve 0

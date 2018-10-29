@@ -38,9 +38,9 @@ namespace ProyectoVideoclub
                 Console.WriteLine();
                 Console.WriteLine("Si quieres ver tus alquileres, elige la opción 3");
                 Console.WriteLine();
-                Console.WriteLine("Si quieres editar tus datos de cliente, elige la opción 4");
-                Console.WriteLine();
-                Console.WriteLine("Si quieres salir, elige la opción 5");
+                //Console.WriteLine("Si quieres editar tus datos de cliente, elige la opción 4");
+                //Console.WriteLine();
+                Console.WriteLine("Si quieres salir, elige la opción 4");
                 option = Int32.Parse(Console.ReadLine());
                 
 
@@ -57,8 +57,7 @@ namespace ProyectoVideoclub
                         MostrarMisAlquileres();
                         PeticionDevolucion();
                         break;
-                    case LOGOUT:
-                        break;
+                    
                 }
             } while (option <=0 || option>3);
 
