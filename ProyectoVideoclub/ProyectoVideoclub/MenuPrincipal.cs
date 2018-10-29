@@ -57,9 +57,12 @@ namespace ProyectoVideoclub
                         MostrarMisAlquileres();
                         PeticionDevolucion();
                         break;
-                    
+                    case LOGOUT:
+                        Program.MenuInicial();
+                        break;
+
                 }
-            } while (option <=0 || option>3);
+            } while (option <=0 || option>4);
 
         }
 
@@ -71,7 +74,8 @@ namespace ProyectoVideoclub
             foreach (Pelicula peli in listaPeliculas)
             {
                 Console.WriteLine("Id Pelicula: "+ peli.idPelicula + "\t Título: " + peli.titulo + "\t Duración: " 
-                    + peli.duracionMinutos + "\t PEGI: " + peli.pegi);
+                    + peli.duracionMinutos + "\t PEGI: " + peli.pegi + "\n Sinopsis: " + peli.sinopsis);
+                Console.WriteLine();
             }
             Console.WriteLine();
             Iniciar(idCliente);

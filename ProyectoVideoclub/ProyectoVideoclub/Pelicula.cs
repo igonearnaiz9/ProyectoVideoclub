@@ -51,7 +51,7 @@ namespace ProyectoVideoclub
         // devuelve SqlDataReader con el listado
         public List<Pelicula> PeliculasPorEdad(int IdCliente)
         {
-            cadena = "SELECT ID_PELICULA, TITULO,  DURACION_MINUTOS, PEGI ";
+            cadena = "SELECT ID_PELICULA, TITULO, DURACION_MINUTOS, PEGI, SINOPSIS ";
             cadena += "FROM PELICULAS ";
             cadena += "WHERE PEGI <= (SELECT DATEDIFF(year, FECHA_NACIMIENTO, GETDATE()) ";
             cadena += "               FROM CLIENTES ";
@@ -70,6 +70,7 @@ namespace ProyectoVideoclub
                     peli.titulo = PeliculasPorEdad["TITULO"].ToString();
                     peli.duracionMinutos = Convert.ToInt32(PeliculasPorEdad["DURACION_MINUTOS"]);
                     peli.pegi= Convert.ToInt32(PeliculasPorEdad["PEGI"]);
+                    peli.sinopsis= PeliculasPorEdad["SINOPSIS"].ToString();
                     listaPeliculas.Add(peli);
                 }
                 return listaPeliculas;
